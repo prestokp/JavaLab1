@@ -23,7 +23,6 @@ public class Shop
         {
             System.out.print ("Enter the name of the item: ");
             itemName = scan.nextLine();
-           // shoppingCart.add();
 
             System.out.print ("Enter the unit price: ");
             itemPrice = scan.nextDouble();
@@ -39,6 +38,11 @@ public class Shop
            Item item2 = new Item("MacBook Air",1299.99, 2);
            Item item3 = new Item("iPhone XR",999.99,4);
            Item item4 = new Item("HomePod",299.99,2);
+
+           shoppingCart.add(item1);
+           shoppingCart.add(item2);
+           shoppingCart.add(item3);
+           shoppingCart.add(item4);
 
             System.out.print ("Continue shopping (y/n)? ");
             keepShopping = scan.nextLine();
