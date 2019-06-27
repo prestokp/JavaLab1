@@ -16,6 +16,7 @@ public class Guess
         //randomly generate the number to guess
         int max = 10;
         numToGuess = generator.nextInt(max + 1);  //The bound is the max number the generator goes to exclusive
+
         //print message asking user to enter a guess
         System.out.println("Guess a number between 1 and 10: ");
 
@@ -23,7 +24,7 @@ public class Guess
         guess = scan.nextInt();
 
         int count;
-        count = 0; //initialized count
+        count = 1; //initialized count
 
         int countHigh;
         countHigh = 0;
@@ -33,13 +34,16 @@ public class Guess
         while (guess != numToGuess) //keep going as long as the guess is wrong
         {
             //print message saying guess is wrong
-            if (guess < numToGuess)
+            if (guess < numToGuess) {                                      //Be sure to put curly braces around your
+                                                                           //conditional block statements
                 System.out.println("Your guess is too low, try again");
                 countLow = countLow + 1;
+            }
 
-            if (guess > numToGuess)
+            if(guess > numToGuess){
                 System.out.println("Your guess is too high, try again");
                 countHigh = countHigh + 1;
+            }
 
             count = count + 1; //This count tells the user how many tries it took them to guess
 

@@ -19,6 +19,10 @@ public class BaseballStats
         System.out.print ("Enter the name of the input file: ");
         fileName = scan.nextLine();
 
+        while(fileScan.hasNext()){
+            fileName = fileScan.nextLine()
+        }
+
         fileScan = new Scanner(new File(fileName));
         // Read and process each line of the file
     }
