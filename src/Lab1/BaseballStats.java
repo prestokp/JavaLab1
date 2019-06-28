@@ -14,16 +14,27 @@ public class BaseballStats
     {
         Scanner fileScan, lineScan;
         String fileName;
+        String lines;
 
         Scanner scan = new Scanner(System.in);
         System.out.print ("Enter the name of the input file: ");
         fileName = scan.nextLine();
 
-        /*while(fileScan.hasNext()){
-            fileName = fileScan.nextLine()
-        }*/
-
         fileScan = new Scanner(new File(fileName));
+
         // Read and process each line of the file
+        while(fileScan.hasNext()) {
+            lines = fileScan.nextLine();
+            System.out.println("Lines: " + lines);
+
+            lineScan = new Scanner(lines);
+            lineScan.useDelimiter("/");
+
+            while (lineScan.hasNext()) {
+                System.out.println("   " + lineScan.next());
+
+                System.out.println();
+            }
+        }
     }
 }
