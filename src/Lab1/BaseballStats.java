@@ -25,10 +25,11 @@ public class BaseballStats
         // Read and process each line of the file
         while(fileScan.hasNext()) {
             lines = fileScan.nextLine();
-            System.out.println("Lines: " + lines);
+            System.out.println(fileName);
+
 
             lineScan = new Scanner(lines);
-            lineScan.useDelimiter("/");
+            lineScan.useDelimiter(" ");
 
             while (lineScan.hasNext()) {
                 System.out.println("   " + lineScan.next());
